@@ -44,36 +44,35 @@ keys.addEventListener('click',function(e){
 
     else if (operators.includes(key)){
     //1,check previous operator: call operation function
-        // highlight the button
     //2,store inputField into value a then,
     //3,set addition function ready when next operator click
-
+    inputField.innerText=key;
 
         if(opKey!=""){
-            
 
             result=calc(a,b);
             console.log(result);
-            // inputField.innerText=result;
-            // opKey="";
+            inputField.innerText=result;
+            // a=result;
         }
         opKey=key;
-        console.log("operation:" + opKey);
+        console.log(opKey);
         
         b=a;        
         console.log("b is "+b);
 
         // inputField.innerText="";
-        inputField.innerText=result;
-        a=result;
-        console.log("a is "+a.toString()); 
+       
+        console.log("a is "+a.toString());   
+        console.log("opKey is "+opKey);
     }
 
     else if(e.target.innerText == "C"){
         inputField.innerText = "";
-        a=0;
-        b=0;
-        result=0;
+        a=0; console.log("a is "+a.toString());    
+        b=0; console.log("b is "+b);
+        result=0; console.log(result);
         opKey='';
     }
+    //c
 })
