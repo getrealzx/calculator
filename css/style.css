@@ -76,6 +76,12 @@ p {
     font-weight: bold;
 }
 
+.afterClick{
+    background-color: darkslategray;
+    color: white;
+    border: 2px, solid black;
+}
+
 .leftPanel {
     display: inline-block;
 }
